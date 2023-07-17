@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px ;
+        }
+        button{
+            cursor: pointer;
+            background-color: rgb(36, 251, 233);
+            background-image: linear-gradient(rgb(0, 255, 42),rgb(0, 255, 200));
+
+        }
+        button:hover{
+            transform: skew(16deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <button>use Me</button>
+    
+    <script>
+       const btn= document.querySelector('button');
+       const body=document.querySelector('body');
+       const color=['vilot', 'indigo', 'blue','green','yellow','orange','red'];
+       body.style.backgroundColor='pink';
+      document.addEventListener('click',function(){
+        const colorIndex=parseInt(Math.random()*color.length);
+        body.style.backgroundColor=color[colorIndex];
+      });
+      
+
+
+    </script>
+    
+</body>
+</html>
